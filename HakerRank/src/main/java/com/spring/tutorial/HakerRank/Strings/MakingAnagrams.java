@@ -4,6 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/*
+ * Hakerrank: Making Anagrams
+ * https://www.hackerrank.com/challenges/making-anagrams
+ */
 public class MakingAnagrams {
 
 	public static void main(String[] args) {

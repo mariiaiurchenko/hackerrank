@@ -2,6 +2,10 @@ package com.spring.tutorial.HakerRank.Strings;
 
 import java.util.Scanner;
 
+/*
+ * Hakerrank: Game of Thrones - I
+ * https://www.hackerrank.com/challenges/game-of-thrones
+ */
 public class GameOfThrones1 {
 
 	public static void main(String[] args) {

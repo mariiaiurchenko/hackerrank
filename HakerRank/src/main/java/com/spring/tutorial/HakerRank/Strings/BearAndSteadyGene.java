@@ -1,9 +1,13 @@
-package com.spring.tutorial.HakerRank;
+package com.spring.tutorial.HakerRank.Strings;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/*
+ * Hakerrank: Bear and Steady Gene
+ * https://www.hackerrank.com/challenges/bear-and-steady-gene
+ */
 public class BearAndSteadyGene {
 
 	public static void main(String[] args) {

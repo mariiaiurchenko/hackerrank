@@ -2,6 +2,10 @@ package com.spring.tutorial.HakerRank.Strings;
 
 import java.util.Scanner;
 
+/*
+ * Hakerrank: Funny String
+ * https://www.hackerrank.com/challenges/funny-string
+ */
 public class FunnyString {
 
 	private static final String FUNNY = "Funny";

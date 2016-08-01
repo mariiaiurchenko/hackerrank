@@ -5,6 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/*
+ * Hakerrank: Sherlock and Anagrams
+ * https://www.hackerrank.com/challenges/sherlock-and-anagrams
+ */
 public class SherlockAndAnagrams {
 
 	public static void main(String[] args) {

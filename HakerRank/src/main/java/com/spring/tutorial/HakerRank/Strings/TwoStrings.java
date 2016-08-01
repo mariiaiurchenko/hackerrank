@@ -1,9 +1,13 @@
-package com.spring.tutorial.HakerRank;
+package com.spring.tutorial.HakerRank.Strings;
 
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
+/*
+ * Hakerrank: Two Strings
+ * https://www.hackerrank.com/challenges/two-strings
+ */
 public class TwoStrings {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
