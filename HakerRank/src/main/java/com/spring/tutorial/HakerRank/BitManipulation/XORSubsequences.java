@@ -4,6 +4,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/*
+ * Hakerrank: XOR Subsequences
+ * https://www.hackerrank.com/challenges/xor-subsequence
+ * 
+ * This solution is to slow O(n^2)
+ * should be redone according to 
+ * http://cs.stackexchange.com/questions/30595/computing-the-mode-of-xor-subsequences
+ * look here http://www.jjj.de/fxt/fxtpage.html may be helpful
+ */
 public class XORSubsequences {
 
 	private static int TOW_POW_16 = 65536;

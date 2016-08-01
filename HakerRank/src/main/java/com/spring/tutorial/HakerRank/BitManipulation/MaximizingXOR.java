@@ -3,6 +3,10 @@ package com.spring.tutorial.HakerRank.BitManipulation;
 import java.math.BigInteger;
 import java.util.Scanner;
 
+/*
+ * Hakerrank: Maximizing XOR
+ * https://www.hackerrank.com/challenges/maximizing-xor
+ */
 public class MaximizingXOR {
 
     static int maxXor(int l, int r) {

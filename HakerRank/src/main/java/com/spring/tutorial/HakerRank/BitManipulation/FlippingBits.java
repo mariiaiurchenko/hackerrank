@@ -2,6 +2,10 @@ package com.spring.tutorial.HakerRank.BitManipulation;
 
 import java.util.Scanner;
 
+/*
+ * Hakrrank: Flipping bits
+ * https://www.hackerrank.com/challenges/flipping-bits
+ */
 public class FlippingBits {
 
 	static final long TWO_POW_32 = (long) Math.pow(2, 32) - 1;
