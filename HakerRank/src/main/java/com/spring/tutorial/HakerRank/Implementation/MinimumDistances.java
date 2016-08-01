@@ -1,9 +1,13 @@
-package WorldCodeSprint4;
+package com.spring.tutorial.HakerRank.Implementation;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/*
+ * Hakerrank: Minimum Distances
+ * https://www.hackerrank.com/challenges/minimum-distances
+ */
 public class MinimumDistances {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
@@ -26,5 +30,6 @@ public class MinimumDistances {
 			map.put(el, i);
 		}
 		System.out.println(res);
+		in.close();
 	}
 }

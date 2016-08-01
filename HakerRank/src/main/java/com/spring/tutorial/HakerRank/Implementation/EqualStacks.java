@@ -1,15 +1,19 @@
-package WorldCodeSprint4;
+package com.spring.tutorial.HakerRank.Implementation;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+/*
+ * Hakerrank: Equal Stacks
+ * https://www.hackerrank.com/challenges/equal-stacks
+ */
 public class EqualStacks {
 
-	private static int getHeigth(Queue q) {
+	private static int getHeigth(Queue<Integer> q) {
 		int height = 0;
-		for (Object el : q) {
-			height += (Integer) el;
+		for (Integer el : q) {
+			height += el;
 		}
 		return height;
 	}
@@ -20,9 +24,9 @@ public class EqualStacks {
 		int b = in.nextInt();
 		int c = in.nextInt();
 		Queue[] q = new LinkedList[3];
-        q[0] = new LinkedList<Integer>();
-        q[1] = new LinkedList<Integer>();
-        q[2] = new LinkedList<Integer>();
+		q[0] = new LinkedList<Integer>();
+		q[1] = new LinkedList<Integer>();
+		q[2] = new LinkedList<Integer>();
 
 		for (int i = 0; i < a; i++) {
 			q[0].add(in.nextInt());
@@ -53,7 +57,7 @@ public class EqualStacks {
 					maxIdx = 2;
 				}
 			}
-			height[maxIdx] = height[maxIdx] - (Integer)q[maxIdx].poll(); 
+			height[maxIdx] = height[maxIdx] - (Integer) q[maxIdx].poll();
 		}
 
 		System.out.println(height[0]);
