@@ -21,7 +21,6 @@ public class RoadsInHackerLand {
 			int a = in.nextInt();
 			int b = in.nextInt();
 			int dist = in.nextInt();
-			//map.put(Math.min(a, b), CityDist(Math.max(a, b), new BigInteger(Math.pow(2, dist	))));
 		}
 
 		BigInteger dist = BigInteger.ZERO;
