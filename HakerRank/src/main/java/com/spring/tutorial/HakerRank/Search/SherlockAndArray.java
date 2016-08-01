@@ -2,6 +2,10 @@ package com.spring.tutorial.HakerRank.Search;
 
 import java.util.Scanner;
 
+/*
+ * Hakerrank: Sherlock and Array
+ * https://www.hackerrank.com/challenges/sherlock-and-array
+ */
 public class SherlockAndArray {
 
 	public static void main(String[] args) {

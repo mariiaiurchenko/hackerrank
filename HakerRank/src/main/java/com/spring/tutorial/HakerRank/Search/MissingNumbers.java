@@ -2,6 +2,10 @@ package com.spring.tutorial.HakerRank.Search;
 
 import java.util.Scanner;
 
+/*
+ * Hakerrank: Missing Numbers
+ * https://www.hackerrank.com/challenges/missing-numbers
+ */
 public class MissingNumbers {
 
 	public static void main(String[] args) {

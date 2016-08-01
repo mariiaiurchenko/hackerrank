@@ -3,6 +3,10 @@ package com.spring.tutorial.HakerRank.Search;
 import java.util.Scanner;
 import java.util.TreeSet;
 
+/*
+ * Hakerrank: Maximum Subarray Sum
+ * https://www.hackerrank.com/challenges/maximum-subarray-sum
+ */
 public class MaximumSubarraySum {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
