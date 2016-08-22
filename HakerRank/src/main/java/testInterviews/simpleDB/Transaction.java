@@ -10,23 +10,27 @@ import java.util.Set;
  */
 public class Transaction {
 
-	DataContainer data;
+	// we can include transactions into dataContainer
+	// all operations in dataContainer will manager transaction values
+	// previous, count, adding
+	// this reference will be reverted
+	DataContainer dataContainer;
 
 	Map<String, String> prevKeyVal;
 	Map<String, Integer> countVal;
 	Set<String> added;
 
-	Transaction(DataContainer data) {
-		this.data = data;
-		prevKeyVal = new HashMap<String, String>();
-		countVal = new HashMap<String, Integer>();
-		added = new HashSet<String>();
+	public Transaction(DataContainer data) {
+		this.dataContainer = data;
+		prevKeyVal = new HashMap<>();
+		countVal = new HashMap<>();
+		added = new HashSet<>();
 	}
 
 	public void set(String key, String val) {
 		savePrevData(key);
 		decreaseCountVal(val);
-		data.set(key, val);
+		dataContainer.set(key, val);
 	}
 
 	public void unset(String key) {
@@ -34,35 +38,47 @@ public class Transaction {
 		if (added.contains(key)) {
 			added.remove(key);
 		}
-		data.unset(key);
+		dataContainer.unset(key);
+	}
+
+	public void rollback() {
+		for (String key : prevKeyVal.keySet()) {
+			dataContainer.keyVal.put(key, prevKeyVal.get(key));
+		}
+		for (String key : added) {
+			dataContainer.keyVal.remove(key);
+		}
+		for (String key : countVal.keySet()) {
+			dataContainer.adjustCountVal(key, countVal.get(key));
+		}
+	}
+
+	private void adjustCounterVal(String val, int delta) {
+		int prev = 0;
+		if (countVal.containsKey(val)) {
+			prev = countVal.get(val);
+		}
+		countVal.put(val, prev + delta);
 	}
 
 	private void increaseCountVal(String val) {
-		int prev = 0;
-		if (countVal.containsKey(val)) {
-			prev = countVal.get(val);
-		}
-		countVal.put(val, prev + 1);
+		adjustCounterVal(val, 1);
 	}
 
 	private void decreaseCountVal(String val) {
-		int prev = 0;
-		if (countVal.containsKey(val)) {
-			prev = countVal.get(val);
-		}
-		countVal.put(val, prev - 1);
+		adjustCounterVal(val, -1);
 	}
 
 	private void savePrevData(String key) {
 		if (!prevKeyVal.containsKey(key) && !added.contains(key)) {
-			if (data.get(key) == null) {
+			if (dataContainer.get(key) == null) {
 				added.add(key);
 			} else {
-				prevKeyVal.put(key, data.get(key));
+				prevKeyVal.put(key, dataContainer.get(key));
 			}
 		}
-		if (data.get(key) != null) {
-			increaseCountVal(data.get(key));
+		if (dataContainer.get(key) != null) {
+			increaseCountVal(dataContainer.get(key));
 		}
 	}
 

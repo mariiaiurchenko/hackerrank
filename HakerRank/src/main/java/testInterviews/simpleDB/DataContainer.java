@@ -8,9 +8,9 @@ public class DataContainer {
 	Map<String, String> keyVal;
 	Map<String, Integer> countVal;
 
-	DataContainer() {
-		keyVal = new HashMap<String, String>();
-		countVal = new HashMap<String, Integer>();
+	public DataContainer() {
+		keyVal = new HashMap<>();
+		countVal = new HashMap<>();
 	}
 
 	public String get(String key) {
@@ -41,19 +41,7 @@ public class DataContainer {
 		return countVal.get(val) != null ? countVal.get(val) : 0;
 	}
 
-	public void rollback(Transaction transaction) {
-		for (String key : transaction.prevKeyVal.keySet()) {
-			keyVal.put(key, transaction.prevKeyVal.get(key));
-		}
-		for (String key : transaction.added) {
-			keyVal.remove(key);
-		}
-		for (String key : transaction.countVal.keySet()) {
-			adjustCountVal(key, transaction.countVal.get(key));
-		}
-	}
-
-	private void adjustCountVal(String key, int val) {
+	public void adjustCountVal(String key, int val) {
 		int prev = countVal.containsKey(key) ? countVal.get(key) : 0;
 		countVal.put(key, prev + val);
 	}
