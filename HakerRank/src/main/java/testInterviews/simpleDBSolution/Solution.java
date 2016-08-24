@@ -36,7 +36,8 @@ public class Solution {
 		try (Scanner in = new Scanner(System.in)) {
 			boolean waitForNextCommand = true;
 			while (waitForNextCommand) {
-				String[] input = in.nextLine().split("\\s+");
+				String inputString = in.nextLine();
+				String[] input = inputString.split("\\s+");
 				Command command = null;
 				try {
 					command = Command.valueOf(input[0].toUpperCase());
@@ -50,7 +51,7 @@ public class Solution {
 					System.out.println(command.paramDescription());
 					continue;
 				}
-
+				System.out.println(inputString);
 				switch (command) {
 				case GET:
 					System.out.println(dataBase.get(input[1]));
