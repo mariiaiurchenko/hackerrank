@@ -3,9 +3,9 @@ package testInterviews.simpleDB;
 import java.util.Deque;
 
 public class SimpleDB {
+	
 	private static final String NEW_STRING = "> %s";
-	private static final String NO_TRANSACTION = String.format(NEW_STRING,
-			"NO TRANSACTION");
+	private static final String NO_TRANSACTION = String.format(NEW_STRING, "NO TRANSACTION");
 	private static final String NULL = "NULL";
 
 	private DataContainer dataContainer;

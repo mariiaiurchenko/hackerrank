@@ -6,14 +6,10 @@ import java.util.Map;
 import java.util.Set;
 
 /*
- * contain the information to roll back the changes from current transaction  
+ * contains information to roll back the changes of current transaction  
  */
 public class Transaction {
-
-	// we can include transactions into dataContainer
-	// all operations in dataContainer will manager transaction values
-	// previous, count, adding
-	// this reference will be reverted
+	
 	DataContainer dataContainer;
 
 	Map<String, String> prevKeyVal;
