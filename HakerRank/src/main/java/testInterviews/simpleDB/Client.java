@@ -5,24 +5,25 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
- * SimpleDB is a simple key-value pair in-memory database
- * with a predefined set of commands. The usage messages
- * and help tips are provided as commands are used.
+ * SimpleDB is a simple key-value pair in-memory database with a predefined set
+ * of commands. The usage messages and help tips are provided as commands are
+ * used.
  * 
- * Time complexity for all commands except 'ROLLBACK' is O(1).
- * Map is used to achieve constant time read/write. Also
- * value/count map is used to achieve constant time NUMEQUALTO.
+ * Time complexity for all commands except 'ROLLBACK' is O(1). Map is used to
+ * achieve constant time read/write. Also value/count map is used to achieve
+ * constant time NUMEQUALTO.
  * 
- * ROLLBACK time complexity is O(m) where 
- * 'm' is the number of keys modified in current transaction.
+ * ROLLBACK time complexity is O(m) where 'm' is the number of keys modified in
+ * current transaction.
+ * 
  * 
  * @author Mariia Iurchenko
- *
+ * 
  */
 public class Client {
 
 	public static void main(String args[]) {
-		
+
 		DataContainer dataContainer = new DataContainer();
 		Deque<Transaction> transactions = new LinkedList<>();
 		SimpleDB dataBase = new SimpleDB(dataContainer, transactions);
