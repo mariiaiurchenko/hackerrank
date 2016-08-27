@@ -21,8 +21,6 @@ public class YetAnotherKMPProblem {
 	private static String calcString(int[] chars) {
 		int size = 26;
 		int first = -1;
-		int second = -1;
-		int thirt = -1;
 		int min_index = -1;
 		for (int i = 0; i < size; i++) {
 			if (chars[i] > 0) {
@@ -31,10 +29,6 @@ public class YetAnotherKMPProblem {
 				}
 				if (first == -1) {
 					first = i;
-				} else if (second == -1) {
-					second = i;
-				} else if (thirt == -1) {
-					thirt = i;
 				}
 			}
 		}
